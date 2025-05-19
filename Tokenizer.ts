@@ -22,7 +22,7 @@ class Tokenizer implements ITokenizer {
 
   private handleSymbols() {
     if (['+', '-', '*', '/', '(', ')', ','].includes(this.str[this.i])) {
-      if (this.str[this.i + 1] === '*') {
+      if (this.str[this.i] === '*' && this.str[this.i + 1] === '*') {
         this.tokens.push({type: '**'} as IToken);
         this.i++;
         this.i++;
