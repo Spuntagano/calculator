@@ -13,9 +13,7 @@ class Calculator implements ICalculator {
 
   public calculate(str: string) {
     const tokens = this.tokenizer.tokenize(str);
-    console.log(tokens);
     const ast = this.parser.parse(tokens);
-    console.log(ast);
     const result = this.evaluator.evaluate(ast);
 
     return result;

@@ -57,7 +57,6 @@ class Parser implements IParser {
       this.consume();
       const expresion =  this.parseExpression();
 
-      console.log(expresion);
       if (this.consume()?.type !== ')') {
         throw new Error('Expected token: )');
       }
